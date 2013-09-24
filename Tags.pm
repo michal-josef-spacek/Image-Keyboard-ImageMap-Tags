@@ -9,6 +9,7 @@ use Class::Utils qw(set_params);
 use Encode qw(decode_utf8);
 use Error::Pure qw(err);
 use HTML::Entities qw(encode_entities);
+use Scalar::Util qw(blessed);
 
 # Version.
 our $VERSION = 0.01;
@@ -32,7 +33,7 @@ sub imagemap {
 	my ($self, $keyboard, $usemap) = @_;
 
 	# Check for keyboard.
-	if (ref $self->{'keyboard'} ne 'Image::Keyboard') {
+	if (! blessed($keyboard) || ! $keyboard->isa('Image::Keyboard')) {
 		err "Parameter 'keyboard' must be 'Image::Keyboard' object.";
 	}
 
@@ -184,7 +185,8 @@ Constructor.
 L<Class::Utils>,
 L<Encode>,
 L<Error::Pure>,
-L<HTML::Entities>.
+L<HTML::Entities>,
+L<Scalar::Util>.
 
 =head1 SEE ALSO
 
