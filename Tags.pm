@@ -47,8 +47,8 @@ sub imagemap {
 		['b', 'map'],
 		['a', 'name', $usemap],
 	);
-	foreach my $button_nr ($self->{'keyboard'}->buttons) {
-		my $b_hr = $self->{'keyboard'}->config->{'button'}->{$button_nr};
+	foreach my $button_nr ($keyboard->buttons) {
+		my $b_hr = $keyboard->config->{'button'}->{$button_nr};
 		my $left = $b_hr->{'pos'}->{'left'};
 		my $top = $b_hr->{'pos'}->{'top'};
 		my $coords = join ',', ($left, $top, $left + $b_hr->{'w'},
