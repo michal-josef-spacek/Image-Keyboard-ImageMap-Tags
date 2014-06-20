@@ -22,6 +22,7 @@ meta-spec:
 name: Image-Keyboard-ImageMap-Tags
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:
