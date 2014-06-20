@@ -158,7 +158,7 @@ Constructor.
  use warnings;
 
  # Modules.
- use Dumpvalue;
+ use Data::Printer;
  use Image::Keyboard;
  use Image::Keyboard::ImageMap::Tags;
 
@@ -171,11 +171,10 @@ Constructor.
  my $imagemap = Image::Keyboard::ImageMap::Tags->new;
 
  # Get imagemap.
- my $tags = $imagemap->imagemap($keyboard);
+ my @tags = $imagemap->imagemap($keyboard);
 
  # Dump.
- my $dump = Dumpvalue->new;
- $dump->dumpValues($tags); 
+ p @tags;
 
  # Output like.
  # TODO
