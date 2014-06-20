@@ -1,0 +1,73 @@
+NAME
+    Image::Keyboard::ImageMap::Tags - Perl class for image keyboard imagemap
+    in Tags format creating.
+
+SYNOPSIS
+     use Image::Keyboard::ImageMap::Tags;
+     my $obj = Image::Keyboard::ImageMap::Tags->new(%parameters);
+     my @imagemap = $obj->imagemap($keyboard, $usemap);
+
+METHODS
+    "new(%parameters)"
+            Constructor.
+
+    "imagemap($keyboard[, $usemap])"
+             Get image map for Image::Keyboard object and usemap id.
+             Default value of $usemap id is 'keyboard'.
+             Returns array of Tags elements.
+
+ERRORS
+     new():
+             From Class::Utils::set_params():
+                     Unknown parameter '%s'.
+
+     imagemap():
+             Parameter 'keyboard' must be 'Image::Keyboard' object.
+
+EXAMPLE
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Data::Printer;
+     use Image::Keyboard;
+     use Image::Keyboard::ImageMap::Tags;
+
+     # Create example keyboard.
+     my $keyboard = Image::Keyboard->new(
+             # TODO
+     );
+
+     # Image map object.
+     my $imagemap = Image::Keyboard::ImageMap::Tags->new;
+
+     # Get imagemap.
+     my @tags = $imagemap->imagemap($keyboard);
+
+     # Dump.
+     p @tags;
+
+     # Output like.
+     # TODO
+
+DEPENDENCIES
+    Class::Utils, Encode, Error::Pure, HTML::Entities, Scalar::Util.
+
+SEE ALSO
+    Image::Keyboard, Image::Keyboard::Config, Tags.
+
+REPOSITORY
+    <https://github.com/tupinek/Image-Keyboard-ImageMap-Tags>
+
+AUTHOR
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+

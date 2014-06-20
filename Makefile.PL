@@ -10,6 +10,7 @@ abstract 'Perl class for image keyboard imagemap in Tags format creating.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Image-Keyboard-ImageMap-Tags';
+readme_from 'Tags.pm';
 requires 'Class::Utils' => 0.03;
 requires 'Encode' => 0;
 requires 'Error::Pure' => 0.11;
