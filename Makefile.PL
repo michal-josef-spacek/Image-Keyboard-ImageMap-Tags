@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Perl class for image keyboard imagemap in Tags format creating.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Image-Keyboard-ImageMap-Tags';
 readme_from 'Tags.pm';

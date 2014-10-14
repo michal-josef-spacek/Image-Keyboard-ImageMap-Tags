@@ -1,7 +1,7 @@
 ---
 abstract: 'Perl class for image keyboard imagemap in Tags format creating.'
 author:
-  - 'Michal Špaček <skim@cpan.org>'
+  - 'Michal Spacek <skim@cpan.org>'
 build_requires:
   English: 0
   ExtUtils::MakeMaker: 6.36
@@ -36,4 +36,4 @@ resources:
   homepage: https://github.com/tupinek/Image-Keyboard-ImageMap-Tags
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/tupinek/Image-Keyboard-ImageMap-Tags
-version: 0.02
+version: '0.02'
